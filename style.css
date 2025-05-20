@@ -1,130 +1,12 @@
+/* === Estilos base (Desktop First) === */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Hace que el padding y el border no aumenten el tamaño total del elemento */
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif; /* Define la fuente general */
-    background-color: #f5f5f5; /* Color de fondo claro */
-    color: #333; /* Color de texto oscuro */
-    padding: 20px; /* Espacio interno para que el contenido no quede pegado al borde */
-}
-
-.header {
-    background-color: black; /* Fondo negro */
-    color: orange; /* Texto naranja */
-    text-align: center; /* Centra el texto */
-    padding: 20px; /* Espaciado interior */
-    position: relative; /* Permite posicionar elementos hijos con position absoluta */
-}
-
-.logo {
-    position: absolute; /* Posiciona la imagen de forma flotante */
-    top: 10px;
-    left: 20px;
-    width: 100px; /* Ancho del logo */
-}
-
-.nav {
-    background-color: #222; /* Gris oscuro */
-    text-align: center; /* Centra los enlaces */
-    padding: 15px; /* Espaciado interior */
-}
-
-.nav a {
-    color: white; /* Enlaces blancos */
-    text-decoration: none; /* Sin subrayado */
-    margin: 0 20px; /* Espaciado horizontal entre enlaces */
-    font-size: 18px; /* Tamaño del texto */
-}
-
-.nav a:hover {
-    color: orange; /* Cambia el color al pasar el mouse */
-    text-decoration: underline; /* Subraya al pasar el mouse */
-}
-
-.main {
-    margin-top: 30px; /* Espaciado superior */
-}
-
-.content {
-    margin-top: 45px; /* Espacio arriba */
-    width: 68%; /* Ocupa el 68% del ancho */
-    float: left; /* Se alinea a la izquierda */
-    text-align: center; /* Centra el contenido */
-    margin: 0 auto; /* Centrado horizontalmente (aunque está en conflicto con float) */
-}
-
-.content h2 {
-    margin-bottom: 30px; /* Espaciado inferior */
-}
-
-.aside {
-    width: 28%; /* Ancho lateral */
-    float: right; /* A la derecha */
-    background-color: #fff; /* Fondo blanco */
-    padding: 20px; /* Relleno interno */
-    border-radius: 8px; /* Bordes redondeados */
-    margin-left: 2%; /* Espacio entre el contenido y la barra lateral */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
-}
-
-.card {
-    background-color: white; /* Fondo blanco para cada tarjeta */
-    margin-bottom: 20px; /* Espacio entre tarjetas */
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.card:hover {
-    background-color: #50473c86; /* Cambia el fondo al pasar el mouse */
-}
-
-.card img {
-    width: 50%; /* Imagen al 50% del ancho de la tarjeta */
-    border-radius: 5px; /* Bordes redondeados */
-}
-
-.card h3 {
-    margin-top: 10px;
-    color: #ff6600; /* Naranja */
-}
-
-.aside h2,
-.aside h3 {
-    margin-bottom: 15px;
-    color: #ff6600;
-}
-
-.aside ul {
-    list-style: none; /* Quita viñetas de la lista */
-    padding-left: 0;
-    margin-bottom: 20px;
-}
-
-.aside li {
-    margin-bottom: 10px; /* Espaciado entre ítems */
-}
-
-.aside a {
-    text-decoration: none; /* Sin subrayado */
-    color: #333;
-}
-
-.aside a:hover {
-    color: orange; /* Cambia al pasar el mouse */
-}
-
-.footer {
-    background-color: #222; /* Fondo gris oscuro */
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px; /* Se separa del contenido anterior */
-}
-
-body {
+    font-family: Arial, sans-serif;
     background: linear-gradient(90deg,
         rgba(150, 150, 150, 1) 0%,
         rgba(212, 201, 83, 0.62) 11%,
@@ -132,16 +14,168 @@ body {
         rgb(255, 166, 0) 50%,
         rgba(237, 146, 0, 0.48) 70%,
         rgba(237, 221, 83, 0.59) 89%,
-        rgba(150, 150, 150, 1) 100%); /* Fondo degradado horizontal */
+        rgba(150, 150, 150, 1) 100%);
+    color: #333;
+    padding: 1em;
+}
+
+.header {
+    background-color: black;
+    color: orange;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 100px;
+}
+
+.nav {
+    background-color: #222;
+    text-align: center;
+    padding: 1em;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+    font-size: 1.25rem;
+    display: inline-block;
+}
+
+.nav a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 2em auto;
+    overflow: hidden; /* para contener los floats */
+}
+
+.content {
+    width: 68%;
+    float: left;
+    text-align: left;
+    padding: 1em;
+}
+
+.aside {
+    width: 28%;
+    float: right;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background-color: white;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    border-radius: 0.5em;
+    max-width: 100%;
+}
+
+.card:hover {
+    background-color: #50473c86;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin-top: 0.6em;
+    color: #ff6600;
+}
+
+.content h2 {
+    margin-bottom: 1em;
+}
+
+.aside h2,
+.aside h3 {
+    margin-bottom: 0.75em;
+    color: #ff6600;
+}
+
+.aside ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1em;
+}
+
+.aside li {
+    margin-bottom: 0.6em;
+}
+
+.aside a {
+    text-decoration: none;
+    color: #333;
+}
+
+.aside a:hover {
+    color: orange;
+}
+
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
 }
 
 .content h2:hover {
-    font-size: 30px; /* Aumenta tamaño al pasar el mouse */
-    font-weight: bold; /* Lo hace negrita */
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
 .div::after {
-    content: ""; /* Elemento generado virtualmente */
-    display: table; /* Hace que ocupe espacio como tabla */
-    clear: both; /* Limpia los flotantes */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* === Media Queries === */
+
+/* Pantallas medianas o menores (tablets y celulares) */
+@media (max-width: 64em) {
+    .main {
+        margin: 1em;
+    }
+
+    .content,
+    .aside {
+        float: none;
+        width: 100%;
+        text-align: center;
+        box-shadow: none;
+        padding: 1em 0;
+    }
+
+    .card {
+        max-width: 90%;
+        margin: 1em auto;
+    }
+
+    .card img {
+        width: 80%;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .nav a {
+        font-size: 1.12rem;
+    }
 }

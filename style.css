@@ -1,181 +1,175 @@
 /* === Estilos base (Desktop First) === */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {                                                       /* Selector universal: afecta a todos los elementos */
+    margin: 0;                                            /* Elimina el margen predeterminado */
+    padding: 0;                                           /* Elimina el relleno predeterminado */
+    box-sizing: border-box;                               /* Incluye padding y border dentro del tamaño total */
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(90deg,
-        rgba(150, 150, 150, 1) 0%,
-        rgba(212, 201, 83, 0.62) 11%,
-        rgba(237, 146, 0, 0.69) 27%,
-        rgb(255, 166, 0) 50%,
-        rgba(237, 146, 0, 0.48) 70%,
-        rgba(237, 221, 83, 0.59) 89%,
-        rgba(150, 150, 150, 1) 100%);
-    color: #333;
-    padding: 1em;
+    font-family: Arial, sans-serif;                       /* Fuente predeterminada para el texto */
+    background: linear-gradient(90deg,                    /* Fondo con gradiente horizontal */
+        rgba(150, 150, 150, 1) 0%,                         /* Color inicial gris sólido */
+        rgba(212, 201, 83, 0.62) 11%,                      /* Amarillo claro y transparente */
+        rgba(237, 146, 0, 0.69) 27%,                       /* Naranja medio */
+        rgb(255, 166, 0) 50%,                              /* Naranja intenso */
+        rgba(237, 146, 0, 0.48) 70%,                       /* Naranja claro y transparente */
+        rgba(237, 221, 83, 0.59) 89%,                      /* Amarillo claro */
+        rgba(150, 150, 150, 1) 100%);                      /* Gris al final del gradiente */
+    color: #333;                                           /* Color del texto: gris oscuro */
+    padding: 1em;                                          /* Espaciado interior alrededor del contenido */
 }
 
 .header {
-    background-color: black;
-    color: orange;
-    text-align: center;
-    padding: 1em;
-    position: relative;
+    background-color: black;                              /* Fondo del encabezado en negro */
+    color: orange;                                        /* Color del texto en naranja */
+    text-align: center;                                   /* Centra el contenido */
+    padding: 1em;                                         /* Relleno interno */
+    position: relative;                                   /* Posicionamiento relativo para elementos internos */
 }
 
-.logo {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    width: 100px;
+.header__title {
+    margin-left: 40px;                                    /* Desplaza el título hacia la derecha */
+}
+
+.header__logo {
+    position: absolute;                                   /* Posicionamiento absoluto dentro del header */
+    top: 10px;                                            /* Distancia desde el borde superior */
+    left: 20px;                                           /* Distancia desde el borde izquierdo */
+    width: 100px;                                         /* Ancho fijo del logo */
 }
 
 .nav {
-    background-color: #222;
-    text-align: center;
-    padding: 1em;
+    background-color: #222;                               /* Fondo oscuro para la barra de navegación */
+    text-align: center;                                   /* Centra los enlaces */
+    padding: 1em;                                         /* Espaciado interno */
 }
 
-.nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1em;
-    font-size: 1.25rem;
-    display: inline-block;
+.nav__link {
+    color: white;                                         /* Color de los enlaces en blanco */
+    text-decoration: none;                                /* Quita el subrayado por defecto */
+    margin: 0 1em;                                        /* Espaciado entre los enlaces */
+    font-size: 1.25rem;                                   /* Tamaño de fuente grande */
+    display: inline-block;                                /* Se comporta como bloque en línea */
 }
 
-.nav a:hover {
-    color: orange;
-    text-decoration: underline;
+.nav__link:hover {
+    color: orange;                                        /* Al pasar el cursor cambia el color a naranja */
+    text-decoration: underline;                           /* Subraya el enlace al pasar el cursor */
 }
 
 .main {
-    max-width: 1200px;
-    margin: 2em auto;
-    overflow: hidden; /* para contener los floats */
+    max-width: 1200px;                                    /* Ancho máximo del contenedor */
+    margin: 2em auto;                                     /* Centrado horizontal con margen vertical */
+    overflow: hidden;                                     /* Evita que los elementos flotantes se desborden */
 }
 
 .content {
-    width: 68%;
-    float: left;
-    text-align: left;
-    padding: 1em;
+    width: 68%;                                           /* Ocupa el 68% del ancho disponible */
+    float: left;                                          /* Se coloca a la izquierda */
+    text-align: left;                                     /* Alinea el texto a la izquierda */
+    padding: 1em;                                         /* Relleno interno */
+}
+
+.content__title {
+    margin-bottom: 1em;                                   /* Espacio debajo del título */
 }
 
 .aside {
-    width: 28%;
-    float: right;
-    background-color: #fff;
-    padding: 1em;
-    border-radius: 0.5em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 29%;                                           /* Ocupa el 28% del ancho disponible */
+    float: right;                                         /* Se posiciona a la derecha */
+    background-color: #fff;                               /* Fondo blanco */
+    padding: 1em;                                         /* Espaciado interno */
+    border-radius: 0.5em;                                 /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);             /* Sombra suave para profundidad */
+}
+.aside__item, .aside__social-item{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 19px;
+}
+
+.aside__title,
+.aside__social-title {
+    padding: 20px;                                        /* Espaciado interno */
+    margin-bottom: 0.75em;                                /* Espaciado inferior */
+    color: #ff6600;                                       /* Color naranja para los títulos */
 }
 
 .card {
-    background-color: white;
-    margin-bottom: 1.5em;
-    padding: 1em;
-    border-radius: 0.5em;
-    max-width: 100%;
+    background-color: white;                              /* Fondo blanco para la tarjeta */
+    margin-bottom: 1.5em;                                 /* Espaciado inferior entre tarjetas */
+    padding: 1em;                                         /* Espaciado interno */
+    border-radius: 0.5em;                                 /* Bordes redondeados */
+    max-width: 100%;                                      /* Ocupa todo el ancho disponible */
 }
 
-.card:hover {
-    background-color: #50473c86;
+.card__image {
+    width: 100%;                                          /* Imagen ocupa todo el ancho de la tarjeta */
+    border-radius: 5px;                                   /* Bordes redondeados */
 }
 
-.card img {
-    width: 100%;
-    border-radius: 5px;
+.card__title {
+    margin-top: 0.6em;                                    /* Espacio superior */
+    color: #ff6600;                                       /* Color naranja para el título */
 }
 
-.card h3 {
-    margin-top: 0.6em;
-    color: #ff6600;
-}
-
-.content h2 {
-    margin-bottom: 1em;
-}
-
-.aside h2,
-.aside h3 {
-    margin-bottom: 0.75em;
-    color: #ff6600;
-}
-
-.aside ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 1em;
-}
-
-.aside li {
-    margin-bottom: 0.6em;
-}
-
-.aside a {
-    text-decoration: none;
-    color: #333;
-}
-
-.aside a:hover {
-    color: orange;
+.card__description {
+    margin: 0.5em 0;                                      /* Espaciado vertical */
 }
 
 .footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    margin-top: 2em;
+    background-color: #222;                               /* Fondo oscuro */
+    color: white;                                         /* Texto blanco */
+    text-align: center;                                   /* Centra el texto */
+    padding: 1em;                                         /* Espacio interno */
+    margin-top: 2em;                                      /* Espaciado superior */
 }
 
-.content h2:hover {
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-.div::after {
-    content: "";
-    display: table;
-    clear: both;
+.footer__text {
+    margin: 0;                                            /* Elimina margen */
 }
 
 /* === Media Queries === */
-
 /* Pantallas medianas o menores (tablets y celulares) */
-@media (max-width: 64em) {
+@media (max-width: 1024px) {
     .main {
-        margin: 1em;
+        margin: 1em;                                      /* Reduce el margen lateral */
     }
 
     .content,
     .aside {
-        float: none;
-        width: 100%;
-        text-align: center;
-        box-shadow: none;
-        padding: 1em 0;
+        float: none;                                      /* Elimina flotado: se apilan verticalmente */
+        width: 100%;                                      /* Ocupan el ancho completo */
+        text-align: center;                               /* Centra el texto */
+        box-shadow: none;                                 /* Quita sombra en pantallas pequeñas */
+        padding: 1em 0;                                   /* Relleno vertical */
     }
 
     .card {
-        max-width: 90%;
-        margin: 1em auto;
+        max-width: 90%;                                   /* Ancho de tarjeta reducido */
+        margin: 1em auto;                                 /* Centrado horizontal */
     }
 
-    .card img {
-        width: 80%;
+    .card__image {
+        width: 80%;                                       /* Imagen más estrecha */
     }
 
-    .logo {
-        width: 80px;
+    .header__logo {
+        width: 10%;                                       /* Logo más pequeño */
     }
 
-    .nav a {
-        font-size: 1.12rem;
+    .nav__link {
+        font-size: 1.12rem;                               /* Fuente más pequeña para navegación */
+    }
+    .aside__item, .aside__social-item{
+        text-decoration: none;
+        list-style: none;
+        margin-left: 10px;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    .aside__title, .aside__social-title{
+        margin-bottom: -18px;
+        font-size: 19px;
     }
 }
